@@ -1,4 +1,10 @@
 const nameInverter = function(name) {
+  try {
+    if (name === undefined) throw "Error";
+  } catch (err) {
+    return err;
+  }
+  
   let honRegex = new RegExp(/[a-z]+\.$/i);
   let manySpaces = new RegExp(/ {2,}/g);
   name.replace(manySpaces, ' ');

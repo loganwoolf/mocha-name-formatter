@@ -77,11 +77,11 @@ describe('#nameInverter()', function() {
   );
 
   it('throw an error when name is undefined'
-    /* , function() {
+    , function() {
       const inputName = undefined;
-      const expectedOutput = throw 'Error';
+      const expectedOutput = 'Error';
       assert.equal(nameInverter(inputName), expectedOutput);
-    } */
+    }
   );
 
 
