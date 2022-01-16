@@ -20,5 +20,57 @@ describe('#nameInverter()', function() {
     }
   );
 
+  it('should return a single name when passed a single name with extra spaces'
+    , function() {
+      const inputName = ' name ';
+      const expectedOutput = 'name';
+      assert.equal(nameInverter(inputName), expectedOutput);
+    }
+  );
+    
+  it('return a last-name, first-name when passed a first and last-name'
+    , function() {
+      const inputName = "first last";
+      const expectedOutput = "last, first";
+      assert.equal(nameInverter(inputName), expectedOutput);
+    }
+  );
+
+  it('Stretch: return a last-name, first-name when passed a first and last-name with extra spaces around the names'
+    /* , function() {
+    
+    } */
+  );
+
+  it('return an empty string when passed a single honorific'
+    /* , function() {
+
+    } */
+  );
+
+  it('return honorific first-name when passed honorific first-name'
+    /* , function() {
+
+    } */
+  );
+
+  it('return a honorific last-name, first-name when passed honorific first-name last-name'
+    /* , function() {
+
+    } */
+  );
+
+  it('return a honorific last-name, first-name when passed honorific first-name last-name with extra spaces around the words'
+    /* , function() {
+
+    } */
+  );
+
+  it('throw an error when name is undefined'
+    /* , function() {
+
+    } */
+  );
+
 
 });
