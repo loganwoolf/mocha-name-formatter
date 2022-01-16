@@ -37,38 +37,50 @@ describe('#nameInverter()', function() {
   );
 
   it('Stretch: return a last-name, first-name when passed a first and last-name with extra spaces around the names'
-    /* , function() {
-    
-    } */
+    , function() {
+      const inputName = " first last";
+      const expectedOutput = "last, first";
+      assert.equal(nameInverter(inputName), expectedOutput);
+    }
   );
 
   it('return an empty string when passed a single honorific'
-    /* , function() {
-
-    } */
+    , function() {
+      const inputName = "Dr. ";
+      const expectedOutput = "";
+      assert.equal(nameInverter(inputName), expectedOutput);
+    }
   );
 
   it('return honorific first-name when passed honorific first-name'
-    /* , function() {
-
-    } */
+    , function() {
+      const inputName = "Dr. first";
+      const expectedOutput = "Dr. first";
+      assert.equal(nameInverter(inputName), expectedOutput);
+    }
   );
 
   it('return a honorific last-name, first-name when passed honorific first-name last-name'
-    /* , function() {
-
-    } */
+    , function() {
+      const inputName = "Dr. first last";
+      const expectedOutput = "Dr. last, first";
+      assert.equal(nameInverter(inputName), expectedOutput);
+    }
   );
 
   it('return a honorific last-name, first-name when passed honorific first-name last-name with extra spaces around the words'
-    /* , function() {
-
-    } */
+    , function() {
+      const inputName = " Dr. first last ";
+      const expectedOutput = "Dr. last, first";
+      assert.equal(nameInverter(inputName), expectedOutput);
+    }
   );
 
   it('throw an error when name is undefined'
     /* , function() {
-
+      const inputName = undefined;
+      const expectedOutput = throw 'Error';
+      assert.equal(nameInverter(inputName), expectedOutput);
     } */
   );
 
